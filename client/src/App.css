@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.date {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 30%;
+}
+
+.separator {
+  height: 80%;
+  border-right: 1px solid white;
+  margin: 0 2rem;
+}
+
+.subtitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  /* kisebb képernyőn az oszlopok egymás alatt jelenjenek meg */
+  .row {
+    flex-direction: column;
+  }
+
+  /* eltávolítjuk a függőleges elválasztó vonalat */
+  .separator {
+    display: none;
+  }
+
+  /* címek kisebb méretben jelenjenek meg */
+  .title {
+    font-size: 2rem;
+  }
+
+  .date {
+    font-size: 1rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  /* az oszlopok margin-je kisebb legyen */
+  .column {
+    margin: 1rem;
+    padding: 1rem;
+    width: 80%;
+  }
+}
+
+/* vékony fehér függőleges vonal a desktop verzióban */
+@media screen and (min-width: 768px) {
+  .separator {
+    border-right: 1px solid white;
+  }
+}
